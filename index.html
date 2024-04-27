@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Filter</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        #searchInput {
+            width: 300px;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        #urlContainer {
+            height: 80%;
+            width: 300px;
+            overflow-y: auto;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        #urlList {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        #urlList li {
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="searchInput" placeholder="Type to filter URLs..." onkeyup="filterURLs()">
+    <div id="urlContainer">
+        <ul id="urlList">
+            <li><a href="https://pmav99.github.io/static/ERA5-meluxina.html">ERA5-meluxina.html</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function filterURLs() {
+            var input = document.getElementById('searchInput');
+            var filter = input.value.toUpperCase();
+            var ul = document.getElementById("urlList");
+            var li = ul.getElementsByTagName('li');
+
+            for (var i = 0; i < li.length; i++) {
+                var a = li[i].getElementsByTagName('a')[0];
+                var txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

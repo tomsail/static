@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "static"
+version = "0.1.0"
+description = ""
+authors = ["Panos Mavrogiorgos <pmav99@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+jinja2 = "*"
+natsort = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

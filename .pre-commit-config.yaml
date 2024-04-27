@@ -1,0 +1,22 @@
+---
+ci:
+  skip: []
+  autofix_prs: false
+default_language_version:
+  python: "python3"
+fail_fast: false
+
+repos:
+  - repo: "https://github.com/kynan/nbstripout"
+    rev: "0.6.1"
+    hooks:
+      - id: "nbstripout"
+
+  - repo: "local"
+    hooks:
+
+      - id: "gen_index"
+        name: "generate index"
+        entry: "make index"
+        language: "system"
+        types: ["html"]
