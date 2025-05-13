@@ -21,7 +21,6 @@
         }
         #urlContainer {
             height: 80%;
-            width: 300px;
             overflow-y: auto;
             padding: 10px;
             border-radius: 5px;
@@ -43,48 +42,82 @@
 </head>
 <body>
     <input type="text" id="searchInput" placeholder="Type to filter URLs..." onkeyup="filterURLs()">
+
     <div id="urlContainer">
-        <ul id="urlList">
-            <li><a href="https://tomsail.github.io/static/bathy_gradient.html">Bathy Gradient Sensitivity</a></li>
+        <!-- Meshing -->
+        <h3>Meshing</h3>
+        <ul class="urlList">
             <li><a href="https://tomsail.github.io/static/holoviews_mesh_edit.html">Mesh editing using panel dashboarding</a></li>
-            <li><a href="https://tomsail.github.io/static/extract_CMEMS_ioc_cleanup.html">Extract surge from CMEMS (Global Ocean Physics Analysis and Forecast) model</a></li>
-            <li><a href="https://tomsail.github.io/static/analyse_wac_t3d.html">Custom branch TELEMAC + xarray selafin demo</a></li>
-            <li><a href="https://tomsail.github.io/static/explore_WebCritech.html">Analysis of the data availability for the data stored on WebCritech</a></li>
-            <li><a href="https://tomsail.github.io/static/IOC_in_STOFS.html">extract IOC station from STOFS 1D outputs locations</a></li>
-            <li><a href="https://tomsail.github.io/static/best_candidates_ioc.html">Skill assessment protocol (2025) - Find the best IOC stations for validation </a></li>
+            <li><a href="https://tomsail.github.io/static/Iceland.html">Iceland Mesh and Model Restart</a></li>
+            <li><a href="https://tomsail.github.io/static/renumber.html">Mesh Renumbering</a></li>
+            <li><a href="https://tomsail.github.io/static/stich_black_sea.html">Stitch a black sea mesh onto the Global GSSHS_f 0.01° (1km) mesh</a></li>
+        </ul>
+
+        <!-- Time Series / Observations -->
+        <h3>Time Series / Observations</h3>
+        <ul class="urlList">
+            <li><a href="https://tomsail.github.io/static/compare_TS.html">Methods for comparing time series</a></li>
             <li><a href="https://tomsail.github.io/static/Observations_IOC_STOFS.html">Gather observations from IOC database and STOFS 2D outputs locations</a></li>
-            <li><a href="https://tomsail.github.io/static/Iceland.html">Iceland_Mesh_and_Model_Restart</a></li>
-            <li><a href="https://tomsail.github.io/static/renumber.html">Mesh_Renumbering</a></li>
-            <li><a href="https://tomsail.github.io/static/Model_metrics.html">Model_metrics</a></li>
-            <li><a href="https://tomsail.github.io/static/cf_attrs.html">CF_Convention</a></li>
-            <li><a href="https://tomsail.github.io/static/Meteo_Chunks.v1.html">Meteo_Chunks.v1</a></li>
+            <li><a href="https://tomsail.github.io/static/test_africa_stations.html">Visualise station in Africa and extract tidal data</a></li>
+            <li><a href="https://tomsail.github.io/static/IOC_in_STOFS.html">extract IOC station from STOFS 1D outputs locations</a></li>
+        </ul>
+
+        <!-- Model Forcing / Extraction -->
+        <h3>Model Forcing / Extraction</h3>
+        <ul class="urlList">
+            <li><a href="https://tomsail.github.io/static/extract_CMEMS_ioc_cleanup.html">Extract surge from CMEMS (Global Ocean Physics Analysis and Forecast) model</a></li>
+            <li><a href="https://pmav99.github.io/static/ERA5-meluxina.html">ERA5-meluxina</a></li>
+            <li><a href="https://tomsail.github.io/static/Meteo_Chunks.v1.html">Meteo Chunks.v1</a></li>
+            <li><a href="https://tomsail.github.io/static/create_selafin_wind.html">Create Selafin Wind</a></li>
+        </ul>
+
+        <!-- Validation / Metrics -->
+        <h3>Validation / Metrics</h3>
+        <ul class="urlList">
+            <li><a href="https://tomsail.github.io/static/best_candidates_ioc.html">Skill assessment protocol (2025) - Find the best IOC stations for validation </a></li>
+            <li><a href="https://tomsail.github.io/static/Model_metrics.html">Model metrics</a></li>
+            <li><a href="https://tomsail.github.io/static/Taylor_Diagram.html">Taylor Diagram</a></li>
+            <li><a href="https://tomsail.github.io/static/Validation_Protocol.html">Validation Protocol</a></li>
+        </ul>
+
+        <!-- Conventions / Standards -->
+        <h3>Conventions / Standards</h3>
+        <ul class="urlList">
+            <li><a href="https://tomsail.github.io/static/cf_attrs.html">CF Convention</a></li>
+        </ul>
+
+        <!-- Numerical Stability -->
+        <h3>Numerical Stability</h3>
+        <ul class="urlList">
             <li><a href="https://pmav99.github.io/static/CFL-schism.html">CFL-schism</a></li>
             <li><a href="https://tomsail.github.io/static/CFL-TELEMAC.html">CFL-TELEMAC</a></li>
-            <li><a href="https://pmav99.github.io/static/ERA5-meluxina.html">ERA5-meluxina</a></li>
-            <li><a href="https://tomsail.github.io/static/Validation_Protocol.html">Validation_Protocol</a></li>
-            <li><a href="https://tomsail.github.io/static/Taylor_Diagram.html">Taylor_Diagram</a></li>
-            <li><a href="https://tomsail.github.io/static/create_selafin_wind.html">Create_Selafin_Wind</a></li>
-            <li><a href="https://tomsail.github.io/static/compare_TS.html">Methods for comparing time series</a></li>
-            <li><a href="https://tomsail.github.io/static/test_africa_stations.html">Visualise station in Africa and extract tidal data</a></li>
+        </ul>
+
+        <!-- Other / General Analysis -->
+        <h3>Other / General Analysis</h3>
+        <ul class="urlList">
+            <li><a href="https://tomsail.github.io/static/bathy_gradient.html">Bathy Gradient Sensitivity</a></li>
+            <li><a href="https://tomsail.github.io/static/analyse_wac_t3d.html">Custom branch TELEMAC + xarray selafin demo</a></li>
+            <li><a href="https://tomsail.github.io/static/explore_WebCritech.html">Analysis of the data availability for the data stored on WebCritech</a></li>
         </ul>
     </div>
 
     <script>
         function filterURLs() {
-            var input = document.getElementById('searchInput');
-            var filter = input.value.toUpperCase();
-            var ul = document.getElementById("urlList");
-            var li = ul.getElementsByTagName('li');
-
-            for (var i = 0; i < li.length; i++) {
-                var a = li[i].getElementsByTagName('a')[0];
-                var txtValue = a.textContent || a.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "";
-                } else {
-                    li[i].style.display = "none";
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const lists = document.querySelectorAll('.urlList');
+            lists.forEach(list => {
+                let anyVisible = false;
+                const items = list.getElementsByTagName('li');
+                for (let item of items) {
+                    const linkText = item.textContent.toLowerCase();
+                    const match = linkText.includes(input);
+                    item.style.display = match ? "" : "none";
+                    if (match) anyVisible = true;
                 }
-            }
+                // Show/hide category heading based on list visibility
+                list.previousElementSibling.style.display = anyVisible ? "" : "none";
+            });
         }
     </script>
 </body>
